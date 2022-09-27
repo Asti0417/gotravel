@@ -1,0 +1,128 @@
+/* RWD設置 */
+/* pc */
+@media screen and (min-width: 1080px) {
+  body {
+    height: 600px;
+  }
+  /* carousel */
+  .carousel .carousel-item {
+    height: 500px;
+  }
+  .carousel .carousel-item img {
+    height: 480px;
+    object-fit: cover;
+  }
+  .carousel-item h5{
+    position: relative;
+    top: 0px;
+    font-size: 2.1ch;
+    font-family: 'Noto Serif TC', serif;
+  }
+
+  /* sconcent */
+  .word h5{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Serif TC', serif;
+    margin-top: 15px;
+  }
+  .word h6{
+    font-size: 19px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Noto Serif TC', serif;
+  }
+}
+
+
+/* pad */
+@media screen and (min-width:480px) and (max-width:1079px) {
+  body {
+    height: 600px;
+  }
+
+  /* carousel */
+  .carousel .carousel-item {
+    height: 500px;
+  }
+  .carousel .carousel-item img {
+    height: 480px;
+    object-fit: cover;
+  }
+  .carousel-item h5{
+    position: relative;
+    top: 0px;
+    font-size: 2.1ch;
+    font-family: 'Noto Serif TC', serif;
+  }
+
+  /* sconcent */
+  .word h5{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Serif TC', serif;
+    margin-top: 15px;
+  }
+  .word h6{
+    font-size: 19px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Noto Serif TC', serif;
+  }
+}
+
+/* phone */
+@media screen and (max-width: 479px) {
+  body {
+    height: 600px;
+  }
+
+  /* carousel */
+  .carousel .carousel-item {
+    height: 340px;
+  }
+  .carousel .carousel-item img {
+    height: 320px;
+    object-fit: cover;
+  }
+  .carousel-item h5{
+    position: relative;
+    top: 0px;
+    font-size: 1.5ch;
+    font-family: 'Noto Serif TC', serif;
+  }
+
+  /* sconcent */
+  .word h5{
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Serif TC', serif;
+    margin-top: 15px;
+  }
+  .word h6{
+    font-size: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Noto Serif TC', serif;
+
+  }
+  .word p{
+    margin-top: 10px;
+  }
+
+  /* footer */
+  .floating-container .floating-button {
+    width: 60px;
+    height: 60px;
+    line-height: 59px;
+  }
+  .floating-container {
+    margin: 30px 10px;
+  }
+}

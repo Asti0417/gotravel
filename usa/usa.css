@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #eae2ce;
+  height: 900px;
+}
+
+/*--- nav---*/
+.navbar {
+  background: #5f8773;
+  border-bottom: 3px solid #fefaf8;
+}
+.nav-link,
+.navbar-brand {
+  color: #fff;
+  cursor: pointer; /* 指向物件讓鼠標變手指 */
+}
+.navbar-brand {
+  font-family: "Noto Serif TC", serif;
+}
+.navbar-brand:hover {
+  color: #c27452;
+}
+.nav-link {
+  margin-right: 1em !important;
+  font-family: "Noto Serif TC", serif;
+}
+.nav-link:hover {
+  color: #c27452;
+}
+.navbar-collapse {
+  justify-content: flex-end; /* 讓導覽列排至尾部(end) */
+}
+
+
+/* content */
+.title h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;  
+  font-family: "Noto Serif TC", serif;
+}
+.title h5 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Serif TC", serif;
+}
+.word {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Serif TC", serif;
+}
+
+.word img {
+  margin: 30px;
+  margin-bottom: 50px;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  border:3px solid #928878;
+}
+.sword{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Serif TC", serif;
+}
+.sword h6{
+  margin-top: 20px;
+  margin-bottom: 0;
+  border:2px solid #c27452;
+  background-color: #c27452;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: "Noto Serif TC", serif;
+  padding: 10px;
+  color: #eae2ce;
+  display: inline-block;
+
+}
+.sword p {
+  border:3px solid #c27452;
+  border-radius: 20px;
+  padding:10px;
+  margin: -2px 30px 30px 30px;
+  font-family: "Noto Serif TC", serif;
+}
+
+
+/* footer */
+@-webkit-keyframes come-in {
+  0% {
+    -webkit-transform: translatey(100px);
+    transform: translatey(100px);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: translateX(-50px) scale(0.4);
+    transform: translateX(-50px) scale(0.4);
+  }
+  70% {
+    -webkit-transform: translateX(0px) scale(1.2);
+    transform: translateX(0px) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translatey(0px) scale(1);
+    transform: translatey(0px) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes come-in {
+  0% {
+    -webkit-transform: translatey(100px);
+    transform: translatey(100px);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: translateX(-50px) scale(0.4);
+    transform: translateX(-50px) scale(0.4);
+  }
+  70% {
+    -webkit-transform: translateX(0px) scale(1.2);
+    transform: translateX(0px) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translatey(0px) scale(1);
+    transform: translatey(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+.floating-container {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  margin: 30px 25px;
+}
+.floating-container:hover {
+  height: 300px;
+}
+.floating-container:hover .floating-button {
+  -webkit-transform: translatey(5px);
+  transform: translatey(5px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating-container:hover .element-container .float-element:nth-child(1) {
+  -webkit-animation: come-in 0.4s forwards 0.2s;
+  animation: come-in 0.4s forwards 0.2s;
+}
+.floating-container:hover .element-container .float-element:nth-child(2) {
+  -webkit-animation: come-in 0.4s forwards 0.4s;
+  animation: come-in 0.4s forwards 0.4s;
+}
+.floating-container:hover .element-container .float-element:nth-child(3) {
+  -webkit-animation: come-in 0.4s forwards 0.6s;
+  animation: come-in 0.4s forwards 0.6s;
+}
+.floating-container .floating-button {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: #ab9b81;
+  bottom: 0;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  line-height: 65px;
+  text-align: center;
+  font-size: 24px;
+  z-index: 100;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating-container .float-element {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  line-height: 50px;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+}
+.floating-container .float-element .material-icons {
+  vertical-align: middle;
+  font-size: 16px;
+}
+.floating-container .float-element:nth-child(1) {
+  background: #485065;
+}
+.floating-container .float-element:nth-child(2) {
+  background: #5f8773;
+}
+.floating-container .float-element:nth-child(3) {
+  background: #c27452;
+}
+.float-element a {
+  color: #fff;
+  text-decoration: none;
+}
+#show1 {
+  border: none;
+  background: none;
+  color: #fff;
+  font-family: "Noto Serif TC", serif;
+}
+#close1 {
+  color: #eae2ce;
+  background: #5f8773;
+  border-radius: 50px;
+  font-family: "Noto Serif TC", serif;
+}
+
+#infoModal01 {
+  border-radius: 20px;
+  padding: 14px;
+  width: 200px;
+}
+
+dialog {
+  border: 4px double #485065;
+  background-color: #eae2ce;
+}
+
+dialog p {
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Serif TC", serif;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* dialog  animation*/
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* other pages */
+/* contact */
+.contact-us {
+  padding: 70px 0px;
+  background: #eae2ce;
+}
+.section-title h2 {
+  color: #485065;
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  border-bottom: 5px solid #7a9889;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.section-title p {
+  color: #e8e8e8;
+  margin-bottom: 30px;
+}
+.contact-us input,
+.contact-us textarea {
+  background: #fafafa;
+}
+.contact-us textarea {
+  min-height: 188px;
+  max-width: 100%;
+}
+.contact-us button {
+  background-color: #5f8773;
+  border-radius: 30px;
+}
+.contact-us button a{
+  color: #eae2ce;
+  text-decoration: none;
+}
+.contact-us button a:hover{
+  opacity: 0.8;
+}
+
+
+/* RWD設置 */
+/* pc */
+@media screen and (min-width: 1080px) {
+  body {
+    height: 600px;
+  }
+  /* content */
+  .title h3 {
+    font-size: 37px;
+    padding-top: 30px;  
+    padding-bottom: 10px;
+  }
+  .title h5 {
+    font-size: 23px;
+    padding-bottom: 10px;
+  }
+  .word img {
+    width: 400px;
+    margin: 15px;
+  }
+  .sword{
+    margin-top: 20px;
+    position: relative;
+    transform: translate(-4%,20%);
+  }
+  .sword p{
+    font-size: 20px; 
+  }
+  .sword h6{
+    font-size: 20px;
+    position: relative;
+    transform: translate(445%,-440%);
+  }
+  
+}
+
+/* pad */
+@media screen and (min-width:966px) and (max-width:1079px) {
+  body {
+    height: 600px;
+  }
+  /* content */
+  .title h3 {
+    font-size: 37px;
+    padding-top: 30px;  
+    padding-bottom: 10px;
+  }
+  .title h5 {
+    font-size: 23px;
+    padding-bottom: 10px;
+  }
+  .word img {
+    width: 400px;
+    margin: 15px;
+  }
+  .sword{
+    margin: 20px 100px 20px 100px;
+  }
+  .sword p{
+    margin: -2px 30px 30px 30px;
+    font-size: 20px ;
+  }
+  .sword h6{
+    font-size: 18px
+  }
+}
+
+/* mini pad */
+@media screen and (min-width:480px) and (max-width:965px) {
+  body {
+    height: 600px;
+  }
+  /* content */
+  .title h3 {
+    font-size: 37px;
+    padding-top: 30px;  
+    padding-bottom: 10px;
+  }
+  .title h5 {
+    font-size: 23px;
+    padding-bottom: 10px;
+  }
+  .word img {
+    width: 400px;
+    margin: 15px;
+  }
+  .sword{
+    margin: 20px 40px 20px 40px;
+  }
+  .sword p{
+    margin: -2px 30px 30px 30px;
+    font-size: 18px ;
+  }
+  .sword h6{
+    font-size: 18px
+  }
+}
+
+
+/* phone */
+@media screen and (max-width: 479px) {
+  body {
+    height: 600px;
+  }
+  /* footer */
+  .floating-container .floating-button {
+    width: 60px;
+    height: 60px;
+    line-height: 59px;
+  }
+  .floating-container {
+    margin: 20px 23px;
+  }
+  /* content */
+  .title h3 {
+    font-size: 27px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .title h5 {
+    font-size: 19px;
+    padding-bottom: 10px;
+  }
+  .word img {
+    width: 330px;
+    margin: 15px;  
+  }
+  .sword p{
+    font-size: 16px
+  }
+}
